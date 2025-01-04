@@ -6,6 +6,9 @@ let fighting;
 let monsterHealth;
 let inventory = ["stick"];
 
+
+
+//used querySelector to manipulate the DOM 
 const button1 = document.querySelector('#button1');
 const button2 = document.querySelector("#button2");
 const button3 = document.querySelector("#button3");
@@ -16,12 +19,17 @@ const goldText = document.querySelector("#goldText");
 const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
+
+//weapons avaible in the game
 const weapons = [
   { name: 'stick', power: 5 },
   { name: 'dagger', power: 30 },
   { name: 'claw hammer', power: 50 },
   { name: 'sword', power: 100 }
 ];
+
+
+//monsters in the game, with their name and levels
 const monsters = [
   {
     name: "slime",
@@ -95,6 +103,8 @@ button1.onclick = goStore;
 button2.onclick = goCave;
 button3.onclick = fightDragon;
 
+
+//this function will update the text and the call the required functions onclick
 function update(location) {
   monsterStats.style.display = "none";
   button1.innerText = location["button text"][0];
